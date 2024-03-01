@@ -15,7 +15,16 @@ const videoCard = ({ info }) => {
       />
       <ul>
         <li className="font-bold py-2">{info.snippet.title}</li>
-        <li>{info.snippet.channelTitle}</li>
+        <div className="text-center flex gap-1">
+          <li>
+            <img
+              className="h-5"
+              src="https://images.pngnice.com/download/2314/Account-PNG-HD.png"
+              alt="user"
+            />
+          </li>
+          <li className="font-semibold">{info.snippet.channelTitle}</li>
+        </div>
         <li>{info.statistics.viewCount + " views"}</li>
       </ul>
     </div>

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constats";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [searchQery, setSearchQuery] = useState("");
@@ -50,18 +51,20 @@ DEBOUNCING
   return (
     <>
       <div className="grid grid-flow-col p-2 m-2 shadow-lg">
-        <div className="flex col-span-1">
+        <div className="flex col-span-1 items-center">
           <img
             onClick={() => toggleMenuHandler()}
             className="h-8 cursor-pointer"
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"
             alt="menu"
           />
-          <img
-            className="h-8 mx-2"
-            src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
-            alt="YT-logo"
-          />
+          <a href="/">
+            <img
+              className="h-8  mx-2"
+              src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
+              alt="YT-logo"
+            />
+          </a>
         </div>
         <div className="col-span-10 px-10">
           <div>
